@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    background-color: #2c3e50;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    width: 400px;
+    height: 600px;
+    background: #f39c12;
+    border: 8px solid #d35400;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.hidden { display: none !important; }
+
+h1 { color: white; text-shadow: 2px 2px #d35400; font-size: 3rem; }
+
+button {
+    background: #e67e22;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 4px #ba671d;
+}
+
+button:active { transform: translateY(2px); box-shadow: 0 2px #ba671d; }
+
+/* Game Screen Elements */
+.hud { width: 100%; display: flex; justify-content: space-between; color: white; font-weight: bold; }
+
+.customer-area {
+    background: white;
+    width: 90%;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #333;
+}
+
+.pizza-prep {
+    width: 200px;
+    height: 200px;
+    background: #f1c40f;
+    border-radius: 50%;
+    border: 5px dashed #d35400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ing-btn { background: #34495e; padding: 10px; }
+.serve-btn { background: #27ae60; width: 80%; box-shadow: 0 4px #1e8449; }

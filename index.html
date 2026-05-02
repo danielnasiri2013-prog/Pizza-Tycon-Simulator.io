@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Tycoon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- HOME SCREEN -->
+        <div id="home-screen" class="screen">
+            <h1>PIZZA TYCOON</h1>
+            <div class="menu-buttons">
+                <button onclick="startGame()">PLAY</button>
+                <button onclick="showSettings()">SETTINGS</button>
+            </div>
+        </div>
+
+        <!-- SETTINGS SCREEN -->
+        <div id="settings-screen" class="screen hidden">
+            <h2>SETTINGS</h2>
+            <div class="setting-item">
+                <label>Music Volume</label>
+                <input type="range" min="0" max="100" value="50">
+            </div>
+            <div class="setting-item">
+                <label>SFX Volume</label>
+                <input type="range" min="0" max="100" value="80">
+            </div>
+            <button onclick="showHome()">BACK</button>
+        </div>
+
+        <!-- GAME SCREEN -->
+        <div id="game-screen" class="screen hidden">
+            <div class="hud">
+                <span>Cash: $<span id="money">0</span></span>
+                <button onclick="showHome()" class="exit-btn">Exit</button>
+            </div>
+            
+            <div class="customer-area">
+                <div id="customer-order">Waiting for customer...</div>
+            </div>
+
+            <div class="pizza-prep">
+                <div id="pizza-base">
+                    <div id="toppings-on-pizza"></div>
+                </div>
+            </div>
+
+            <div class="kitchen-controls">
+                <button class="ing-btn" onclick="addTopping('Sauce')">🍅 Sauce</button>
+                <button class="ing-btn" onclick="addTopping('Cheese')">🧀 Cheese</button>
+                <button class="ing-btn" onclick="addTopping('Pepperoni')">🥩 Pepperoni</button>
+                <button class="serve-btn" onclick="servePizza()">SERVE PIZZA</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
